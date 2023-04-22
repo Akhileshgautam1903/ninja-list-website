@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const getStaticProps = async() =>{
 
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const res = await fetch(process.env.USERS_URL);
     const data = await res.json();
 
     return {
